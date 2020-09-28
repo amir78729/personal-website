@@ -15,8 +15,16 @@
     <div class="title">
 
     </div>
-    <div class="secondary container-fluid " style="margin: 0">
-      hi
+    <div class="container-fluid " style="padding: 20px">
+      <div  class="row">
+        <div class="col-xs-6 col-sm-6 col-md-7 col-lg-8">
+          <h1 :style="{color: currentColor}">Education</h1>
+          <p>I'm a computer engineering student at <b>Amirkabir University of Technology</b> - Tehran Polytechnic (AUT) </p>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
+          <img src="https://sdk.bitmoji.com/render/panel/7b0d608b-8b79-4d57-a49f-f15a558f61c8-9b405aba-93b2-440f-862b-045521d28ada-v1.png?transparent=1&palette=1" alt="education" class="pic">
+        </div>
+      </div>
     </div>
     <div class="title">
 
@@ -72,6 +80,9 @@ export default {
   *{
     transition: all .3s ;
   }
+  p,h1,h2 {
+    cursor: default;
+  }
   .no-focus:focus{
     box-shadow: none;
     outline: none;
@@ -85,6 +96,24 @@ export default {
     height: 30px;
     width: 30px;
   }
+  .pic{
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    height: 350px;
+    padding: 10px 10px 10px 10px;
+  }
+  .pic:hover{
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    -webkit-filter: drop-shadow(0px 0px 10px #00000099);
+    filter:         drop-shadow(0px 0px 10px #00000099);
+    padding: 8px 10px 12px 10px;
+    /*margin-bottom: 10px;*/
+  }
+
+
 
   .title{
     background-image: url("https://cdn.pixabay.com/photo/2018/10/30/16/06/water-lily-3784022_1280.jpg");
