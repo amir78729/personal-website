@@ -6,8 +6,8 @@
 
     <div class="title">
       <div class="text">
-        Amirhossein
-        Alibakhshi
+        <p style="margin-bottom: -40px">Amirhossein</p>
+        <p style="letter-spacing: 6px">Alibakhshi</p>
       </div>
     </div>
     <div class="container-fluid partition" :style="{borderColor: currentColor}">
@@ -72,7 +72,8 @@ export default {
 
 <style>
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'HammerThin';
+    font-size: 18pt;
     /*width: 100%;*/
     padding: 0px;
     margin: 0;
@@ -127,7 +128,7 @@ export default {
 
   .title{
     position: relative;
-    background-image: url("https://cdn.pixabay.com/photo/2018/10/30/16/06/water-lily-3784022_1280.jpg");
+    background-image: url("https://cdn.discordapp.com/attachments/732234196487241741/760218343940292628/molana.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
