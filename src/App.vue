@@ -11,13 +11,18 @@ export default {
   name: 'App',
   data() {
     return {
-      isDark: true,
+      // isDark: true,
     }
   },methods: {
     toggleTheme(){
-      this.isDark = !this.isDark;
+      this.$store.state.isDark = !this.$store.state.isDark;
+      // this.isDark = !this.isDark;
     }
-  }
+  },computed:{
+    isDark(){
+      return this.$store.state.isDark;
+    }
+  },
 }
 </script>
 
