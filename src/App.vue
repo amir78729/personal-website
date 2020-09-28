@@ -225,5 +225,15 @@ export default {
     background: #666666;
     transition: .5s;
   }
+  /**************************/
+  ::-moz-selection { /* Code for Firefox */
+    /*color: red;*/
+    background: transparent;
+  }
+
+  ::selection {
+    /*color: red;*/
+    background: transparent;
+  }
 
 </style>
