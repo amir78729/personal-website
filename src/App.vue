@@ -1,12 +1,12 @@
 <template>
-  <div id="app" :class="{'dark': isDark,'light': !isDark}" class="container" >
-    <button @click="toggleTheme">toggle</button>
+  <div id="app" :class="{'dark': isDark,'light': !isDark}" class="container-fluid" >
+    <button class="btn" @click="toggleTheme"><i class="mo"></i></button>
     <hr>
-    <button @click="changeColor('red')">red</button>
-    <button @click="changeColor('blue')">blue</button>
-    <button @click="changeColor('green')">green</button>
-    <button @click="changeColor('yellow')">yellow</button>
-    <button @click="changeColor('purple')">purple</button>
+    <button class="btn btn-danger" @click="changeColor('red')">red</button>
+    <button class="btn btn-info" @click="changeColor('blue')">blue</button>
+    <button class="btn btn-success" @click="changeColor('green')">green</button>
+    <button class="btn btn-warning" @click="changeColor('yellow')">yellow</button>
+    <button class="btn btn-dark" @click="changeColor('purple')">purple</button>
     <hr>
     <h1 :style="{color: currentColor}">{{currentColor}}</h1>
     <p>hi</p>
@@ -52,11 +52,13 @@ export default {
 <style>
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    width: 100%;
-    transition: all .3s;
+    /*width: 100%;*/
+    padding: 10px;
+    margin: 0;
+    /*transition: all .3s;*/
   }
   *{
-    transition: all .3s;
+    transition: all .3s ;
   }
   .dark{
     background-color: #202020;
