@@ -1,12 +1,12 @@
 <template>
   <div id="app" :class="{'dark': isDark,'light': !isDark}" class="container-fluid" >
-    <button class="btn" @click="toggleTheme"><i class="mo"></i></button>
+    <button class="btn no-focus " @click="toggleTheme"><i style="font-size: 15px " class="rounded-corner material-icons">brightness_medium</i></button>
     <hr>
-    <button class="btn btn-danger" @click="changeColor('red')">red</button>
-    <button class="btn btn-info" @click="changeColor('blue')">blue</button>
-    <button class="btn btn-success" @click="changeColor('green')">green</button>
-    <button class="btn btn-warning" @click="changeColor('yellow')">yellow</button>
-    <button class="btn btn-dark" @click="changeColor('purple')">purple</button>
+    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.red}" @click="changeColor('red')"></button>
+    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.yellow}" @click="changeColor('yellow')"></button>
+    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.green}" @click="changeColor('green')"></button>
+    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.blue}" @click="changeColor('blue')"></button>
+    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.purple}" @click="changeColor('purple')"></button>
     <hr>
     <h1 :style="{color: currentColor}">{{currentColor}}</h1>
     <p>hi</p>
@@ -21,6 +21,7 @@ export default {
   name: 'App',
   data() {
     return {
+      colors,
     }
   },methods: {
     toggleTheme(){
@@ -60,6 +61,22 @@ export default {
   *{
     transition: all .3s ;
   }
+  .no-focus:focus{
+    box-shadow: none;
+    outline: none;
+  }
+
+  .rounded-corner{
+    border-radius: 50%;
+  }
+
+  .buttons-30x30{
+    height: 30px;
+    width: 30px;
+  }
+
+  /******************************************************************************/
+
   .dark{
     background-color: #202020;
     color: #B0B0B0;
@@ -68,5 +85,30 @@ export default {
   .light{
     background-color: #efefef;
     color: #202020;
+  }
+
+  .dark  i{
+    color: #B0B0B0;
+
+    border: solid transparent 10px;
+  }
+
+  .light  i{
+    color: #202020;
+    border: solid transparent 10px;
+
+
+  }
+
+  .dark  i:hover{
+    color: #202020;
+    background-color: #B0B0B0;
+    transform: rotate(180deg);
+  }
+
+  .light  i:hover{
+    color: #B0B0B0;
+    background-color: #202020;
+    transform: rotate(180deg);
   }
 </style>
