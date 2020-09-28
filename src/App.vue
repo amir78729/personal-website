@@ -3,18 +3,20 @@
 
     <div class="left-panel">
       <div class="content secondary" >
+        <div class="handle">
+          <i style="font-size: 20px" class=" material-icons" :style="{color: currentColor}">settings</i>
+        </div>
         <p style="margin: 0px 5px 0px 10px;">color</p>
         <div style="text-align: center;">
           <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.red}" @click="changeColor('red')"></button>
           <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.yellow}" @click="changeColor('yellow')"></button>
           <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.green}" @click="changeColor('green')"></button>
           <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.blue}" @click="changeColor('blue')"></button>
-<!--          <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.purple}" @click="changeColor('purple')"></button>-->
         </div>
-        <hr>
+        <hr :style="{backgroundColor: currentColor}" style="width: 80%">
         <p style="margin: -10px 5px -10px 10px;">theme</p>
         <div style="text-align: center">
-          <button class="btn no-focus buttons-30x30 rounded-corner toggle"  @click="toggleTheme"><i style="font-size: 20px" class=" material-icons">brightness_medium</i></button>
+          <button class="btn no-focus buttons-30x30 rounded-corner toggle"  @click="toggleTheme"><i style="font-size: 20px" class=" material-icons" >brightness_medium</i></button>
         </div>
       </div>
     </div>
@@ -98,7 +100,7 @@ export default {
   *{
     transition: all .3s ;
   }
-  p,h1,h2 {
+  p,h1,h2,i {
     cursor: default;
   }
   .no-focus:focus{
@@ -125,10 +127,15 @@ export default {
 
   .left-panel{
     position: fixed;
+    opacity: .4;
     height: 100%;
     width: 1px;
     background-color: #000;
     z-index: 5;
+  }
+  .left-panel:hover{
+    opacity: .95;
+
   }
   .left-panel .content{
     position: absolute;
@@ -194,6 +201,22 @@ export default {
   }
   .secondary{
     padding: 0;
+  }
+  .handle {
+    height: 30px;
+    width: 30px;
+    top: calc(50% - 15px);
+    right: -15px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+  }
+  .handle i{
+    /*position: absolute;*/
+    /*left:5px ;*/
+    /*top: 4px;*/
+    margin: auto auto;
+
   }
 
   /******************************************************************************/
@@ -262,6 +285,11 @@ export default {
   .dark .toggle:hover i{
     transform: rotate(180deg);
   }
+
+  .dark .left-panel .content .handle {
+    background-color: #404040;
+  }
+
 
 
   /*********************/
