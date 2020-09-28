@@ -1,21 +1,16 @@
 <template>
-  <div id="app" :class="{'dark': isDark,'light': !isDark}" class="container-fluid" >
-    <button class="btn no-focus " @click="toggleTheme"><i style="font-size: 15px " class="rounded-corner material-icons">brightness_medium</i></button>
-    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.red}" @click="changeColor('red')"></button>
-    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.yellow}" @click="changeColor('yellow')"></button>
-    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.green}" @click="changeColor('green')"></button>
-    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.blue}" @click="changeColor('blue')"></button>
-    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.purple}" @click="changeColor('purple')"></button>
-    <hr>
-    <h1 :style="{color: currentColor}">{{currentColor}}</h1>
-    <p>hi</p>
+  <div id="app" :class="{'dark': isDark,'light': !isDark}" class="container-fluid"  >
+
 
 
 
     <div class="title">
-
+      <div class="text">
+        Amirhossein
+        Alibakhshi
+      </div>
     </div>
-    <div class="container-fluid " style="padding: 20px">
+    <div class="container-fluid partition" :style="{borderColor: currentColor}">
       <div  class="row">
         <div class="col-xs-6 col-sm-6 col-md-7 col-lg-8">
           <h1 :style="{color: currentColor}">Education</h1>
@@ -26,9 +21,15 @@
         </div>
       </div>
     </div>
-    <div class="title">
 
-    </div>
+    <button class="btn no-focus " @click="toggleTheme"><i style="font-size: 15px " class="rounded-corner material-icons">brightness_medium</i></button>
+    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.red}" @click="changeColor('red')"></button>
+    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.yellow}" @click="changeColor('yellow')"></button>
+    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.green}" @click="changeColor('green')"></button>
+    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.blue}" @click="changeColor('blue')"></button>
+    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.purple}" @click="changeColor('purple')"></button>
+    <hr>
+    <h1 :style="{color: currentColor}">{{currentColor}}</h1>
 
   </div>
 </template>
@@ -96,6 +97,15 @@ export default {
     height: 30px;
     width: 30px;
   }
+
+  .partition{
+    border-bottom: solid 5px ;
+    border-top: solid 5px ;
+    padding: 50px;
+    box-shadow: 0 0 100px 0 #000000 ;
+
+  }
+
   .pic{
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -116,13 +126,28 @@ export default {
 
 
   .title{
+    position: relative;
     background-image: url("https://cdn.pixabay.com/photo/2018/10/30/16/06/water-lily-3784022_1280.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 400px;
+    height: 550px;
     width: 100%;
+    box-shadow: 0 0 400px 400px #00000099 inset;
+  }
+  .title .text{
+    color: white;
+    cursor: default;
+    font-size: 72pt;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: auto auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .secondary{
     padding: 0;
