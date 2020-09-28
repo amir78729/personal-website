@@ -1,6 +1,23 @@
 <template>
   <div id="app" :class="{'dark': isDark,'light': !isDark}" class="container-fluid"  >
 
+    <div class="left-panel">
+      <div class="content secondary" >
+        <p style="margin: 0px 5px 0px 10px;">color</p>
+        <div style="text-align: center;">
+          <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.red}" @click="changeColor('red')"></button>
+          <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.yellow}" @click="changeColor('yellow')"></button>
+          <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.green}" @click="changeColor('green')"></button>
+          <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.blue}" @click="changeColor('blue')"></button>
+<!--          <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.purple}" @click="changeColor('purple')"></button>-->
+        </div>
+        <hr>
+        <p style="margin: -10px 5px -10px 10px;">theme</p>
+        <div style="text-align: center">
+          <button class="btn no-focus buttons-30x30 rounded-corner toggle"  @click="toggleTheme"><i style="font-size: 20px" class=" material-icons">brightness_medium</i></button>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -8,6 +25,15 @@
       <div class="text">
         <p style="margin-bottom: -40px">Amirhossein</p>
         <p style="letter-spacing: 6px">Alibakhshi</p>
+<!--        <p style="font-family: 'Lucida Handwriting';-->
+<!--         position: absolute;-->
+<!--         right: -10px;-->
+<!--         bottom: 15px;-->
+<!--         font-size: 18pt;-->
+<!--         transform: rotate(-10deg)"-->
+<!--        :style="{color:currentColor}">-->
+<!--          personal <br>website-->
+<!--        </p>-->
       </div>
     </div>
     <div class="container-fluid partition" :style="{borderColor: currentColor}">
@@ -21,16 +47,6 @@
         </div>
       </div>
     </div>
-
-    <button class="btn no-focus " @click="toggleTheme"><i style="font-size: 15px " class="rounded-corner material-icons">brightness_medium</i></button>
-    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.red}" @click="changeColor('red')"></button>
-    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.yellow}" @click="changeColor('yellow')"></button>
-    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.green}" @click="changeColor('green')"></button>
-    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.blue}" @click="changeColor('blue')"></button>
-    <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.purple}" @click="changeColor('purple')"></button>
-    <hr>
-    <h1 :style="{color: currentColor}">{{currentColor}}</h1>
-
   </div>
 </template>
 
@@ -107,6 +123,24 @@ export default {
 
   }
 
+  .left-panel{
+    position: fixed;
+    height: 100%;
+    width: 1px;
+    background-color: #000;
+    z-index: 5;
+  }
+  .left-panel .content{
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    left: -99px;
+  }
+  .left-panel:hover .content{
+    left: 0px;
+    box-shadow: 0 0 50px 0 #00000099;
+  }
+
   .pic{
     /*background-position: center;*/
     /*background-repeat: no-repeat;*/
@@ -124,6 +158,14 @@ export default {
     /*margin-bottom: 10px;*/
   }
 
+  .toggle {
+    position: relative;
+  }
+  .toggle i{
+    position: absolute;
+    left: 3.5pt;
+    top: 3.2pt;
+  }
 
 
   .title{
@@ -176,30 +218,51 @@ export default {
     color: #202020;
   }
 
-  .dark  i{
+  .dark .toggle{
     color: #B0B0B0;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px 10px transparent inset;
 
-    border: solid transparent 10px;
+    /*border: solid transparent 10px;*/
   }
 
-  .light  i{
+  .light .toggle{
     color: #202020;
-    border: solid transparent 10px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px 10px transparent inset;
+
+    /*border: solid transparent 10px;*/
 
 
   }
 
-  .dark  i:hover{
-    color: #202020;
-    background-color: #B0B0B0;
+  .dark .toggle:hover {
+    /*color: #202020;*/
+    /*background-color: #B0B0B0;*/
+    box-shadow: 0 0 10px 10px #00000055 inset;
+    /*transform: rotate(180deg);*/
+  }
+
+
+  .light .toggle:hover{
+    /*color: #B0B0B0;*/
+    /*background-color: #202020;*/
+    box-shadow: 0 0 10px 10px #00000055 inset;
+    /*transform: rotate(180deg);*/
+  }
+
+  .light .toggle:hover i{
     transform: rotate(180deg);
   }
 
-  .light  i:hover{
-    color: #B0B0B0;
-    background-color: #202020;
+  .dark .toggle:hover i{
     transform: rotate(180deg);
   }
+
 
   /*********************/
   /* width */
