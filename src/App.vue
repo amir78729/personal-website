@@ -41,7 +41,7 @@
     <div class="container-fluid partition" :style="{borderColor: currentColor}">
       <div  class="row">
         <div class="col-xs-6 col-sm-6 col-md-7 col-lg-8">
-          <h1 :style="{color: currentColor}">Education</h1>
+          <h1 :style="{color: currentColor}">education</h1>
           <p>I'm a computer engineering student at <b>Amirkabir University of Technology</b> - Tehran Polytechnic (AUT) </p>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
@@ -49,6 +49,39 @@
         </div>
       </div>
     </div>
+
+    <div class="image1"> </div>
+
+    <div class="container-fluid partition" :style="{borderColor: currentColor}">
+      <div  class="row">
+
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
+          <img src="https://sdk.bitmoji.com/render/panel/7b0d608b-8b79-4d57-a49f-f15a558f61c8-9b405aba-93b2-440f-862b-045521d28ada-v1.png?transparent=1&palette=1" alt="education" class="pic">
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-7 col-lg-8">
+          <h1 :style="{color: currentColor}">programming</h1>
+          <p>Coding is a passion of mine!</p>
+          <p>Specifically with languages like:</p>
+          <div class="row">
+            <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+              <i :style="{color:currentColor}" class='fab fa-java' style='font-size:36px'></i>
+              <p>Java</p>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+              <i :style="{color:currentColor}" class='fab fa-python' style='font-size:36px'></i>
+              <p>Python</p>
+            </div>
+            <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+              <i :style="{color:currentColor}" class='fab fa-cuttlefish' style='font-size:36px'></i>
+              <p>C</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </template>
 
@@ -103,6 +136,10 @@ export default {
   p,h1,h2,i {
     cursor: default;
   }
+  h1{
+    font-family: Rage ;
+    font-size: 48pt;
+  }
   .no-focus:focus{
     box-shadow: none;
     outline: none;
@@ -141,7 +178,7 @@ export default {
     position: absolute;
     height: 100%;
     width: 100px;
-    left: -99px;
+    left: -100px;
   }
   .left-panel:hover .content{
     left: 0px;
@@ -199,6 +236,19 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .image1{
+    position: relative;
+    background-image: url("https://cdn.discordapp.com/attachments/732234196487241741/760218343940292628/molana.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 550px;
+    width: 100%;
+    box-shadow: 0 0 400px 400px #00000099 inset;
+  }
+
   .secondary{
     padding: 0;
   }
@@ -284,6 +334,10 @@ export default {
 
   .dark .toggle:hover i{
     transform: rotate(180deg);
+  }
+
+  .light .left-panel .content .handle {
+    background-color: #ededed;
   }
 
   .dark .left-panel .content .handle {
