@@ -27,15 +27,6 @@
       <div class="text title-font">
         <p style="margin-bottom: -40px">Amirhossein</p>
         <p style="letter-spacing: 6px">Alibakhshi</p>
-<!--        <p style="font-family: 'Lucida Handwriting';-->
-<!--         position: absolute;-->
-<!--         right: -10px;-->
-<!--         bottom: 15px;-->
-<!--         font-size: 18pt;-->
-<!--         transform: rotate(-10deg)"-->
-<!--        :style="{color:currentColor}">-->
-<!--          personal <br>website-->
-<!--        </p>-->
       </div>
     </div>
     <div class="container-fluid partition" :style="{borderColor: currentColor}">
@@ -57,9 +48,6 @@
 
     <div class="container-fluid partition" :style="{borderColor: currentColor}">
       <div  class="row">
-
-
-
         <div class="col-xs-6 col-sm-6 col-md-7 col-lg-8">
           <h1 :style="{color: currentColor}">programming</h1>
           <p>Coding is a passion of mine!</p>
@@ -87,7 +75,7 @@
                 <span>
                   <i  class='fab fa-github '  style="cursor: pointer"></i>
                 </span>
-                <b>/amir78729</b>
+                <b class="title-font">/amir78729</b>
               </button>
             </a>
           </div>
@@ -95,6 +83,53 @@
 
         <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
           <img src="https://sdk.bitmoji.com/render/panel/042c5481-28ec-4d85-8f58-1e8f2376bfc6-9b405aba-93b2-440f-862b-045521d28ada-v1.png?transparent=1&palette=1" alt="education" class="pic" style="border-radius: 50%">
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="image2"> </div>
+
+    <div class="container-fluid partition" :style="{borderColor: currentColor}">
+      <div  class="row">
+        <div class="col-xs-6 col-sm-6 col-md-7 col-lg-8">
+          <h1 :style="{color: currentColor}">contact me!</h1>
+          <p>You can contact me with one of this ways:</p>
+          <div class="row">
+            <div class="col-sm-6 row">
+              <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+                <a href="https://instagram.com/amirhosseinalibakhshi">
+                  <i class='fa fa-google' style='font-size:36px'></i>
+                </a>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+                <a href="https://t.me/amirhosseinalibakhshi">
+                  <i class='fa fa-telegram' style='font-size:36px'></i>
+                </a>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+                <a href="https://linkedin.com/in/amirhosseinalibakhshi">
+                  <i class='fa fa-linkedin' style='font-size:36px'></i>
+                </a>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+                <a href="https://instagram.com/amirhosseinalibakhshi">
+                  <i class='fa fa-instagram' style='font-size:36px'></i>
+                </a>
+              </div>
+              <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+                <a href="https://github.com/amir78729">
+                  <i class='fa fa-github' style='font-size:36px'></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
+          <img src="https://sdk.bitmoji.com/render/panel/d0a21abe-de3b-47d8-a82f-77f72d52fd40-9b405aba-93b2-440f-862b-045521d28ada-v1.png?transparent=1&palette=1" alt="education" class="" style=" margin: -50px; padding: 0; float: right ; ">
         </div>
 
       </div>
@@ -159,6 +194,11 @@ export default {
   p,h1,h2,i {
     cursor: default;
   }
+
+  button:hover{
+    box-shadow: 0 0 0 100px #00000022 inset;
+  }
+
   h1{
     font-family: Rage ;
     font-size: 48pt;
@@ -262,6 +302,17 @@ export default {
 
   .image1{
     position: relative;
+    background-image: url("https://cdn.discordapp.com/attachments/732234196487241741/761651635982041148/photo_2020-08-14_15-45-53.jpg");
+    background-repeat: no-repeat;
+    background-size: 105%;
+    background-position: center;
+    background-attachment: fixed;
+    height: 350px;
+    width: 100%;
+    box-shadow: 0 0 400px 400px #00000099 inset;
+  }
+  .image2{
+    position: relative;
     background-image: url("https://cdn.discordapp.com/attachments/732234196487241741/760218343940292628/molana.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -285,11 +336,43 @@ export default {
     position: absolute;
   }
   .handle i{
-    /*position: absolute;*/
-    /*left:5px ;*/
-    /*top: 4px;*/
+    position: absolute;
+    left:5px ;
+    top: 4px;
     margin: auto auto;
 
+  }
+
+  /* Style all font awesome icons */
+  .fa {
+    padding: 10px;
+    font-size: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    opacity: .7;
+    border-radius: 50%;
+  }
+
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 1;
+  }
+
+  /* Set a specific color for each brand */
+
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  /* Twitter */
+  .fa-twitter {
+    /*background: #55ACEE;*/
+    /*color: white;*/
   }
 
   /******************************************************************************/
@@ -402,6 +485,10 @@ export default {
   ::selection {
     /*color: red;*/
     background: transparent;
+  }
+
+  a:link{
+    color: white;
   }
 
 </style>

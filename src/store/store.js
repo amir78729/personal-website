@@ -6,7 +6,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
-    isDark: false,
+    isDark: true,
     // colors:{
     //   blue: '#5bc0de',
     //   green: '#28a745',
