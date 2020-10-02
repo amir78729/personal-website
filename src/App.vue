@@ -6,7 +6,7 @@
         <div class="handle">
           <i style="font-size: 20px" class=" material-icons" :style="{color: currentColor}">settings</i>
         </div>
-        <p style="margin: 0px 5px 0px 10px;">color</p>
+        <p style="margin: 0px 5px 0px 10px; font-size: 18pt" class="title-font">color</p>
         <div style="text-align: center;">
           <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.red}" @click="changeColor('red')"></button>
           <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.yellow}" @click="changeColor('yellow')"></button>
@@ -14,7 +14,7 @@
           <button class="btn no-focus buttons-30x30 rounded-corner" :style="{backgroundColor: colors.blue}" @click="changeColor('blue')"></button>
         </div>
         <hr :style="{backgroundColor: currentColor}" style="width: 80%">
-        <p style="margin: -10px 5px -10px 10px;">theme</p>
+        <p style="margin: -10px 5px -10px 10px; font-size: 18pt" class="title-font">theme</p>
         <div style="text-align: center">
           <button class="btn no-focus buttons-30x30 rounded-corner toggle"  @click="toggleTheme"><i style="font-size: 20px" class=" material-icons" >brightness_medium</i></button>
         </div>
@@ -24,7 +24,7 @@
 
 
     <div class="title">
-      <div class="text">
+      <div class="text title-font">
         <p style="margin-bottom: -40px">Amirhossein</p>
         <p style="letter-spacing: 6px">Alibakhshi</p>
 <!--        <p style="font-family: 'Lucida Handwriting';-->
@@ -40,13 +40,16 @@
     </div>
     <div class="container-fluid partition" :style="{borderColor: currentColor}">
       <div  class="row">
+
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
+          <img src="https://sdk.bitmoji.com/render/panel/7b0d608b-8b79-4d57-a49f-f15a558f61c8-9b405aba-93b2-440f-862b-045521d28ada-v1.png?transparent=1&palette=1" alt="education" class="pic">
+        </div>
+
         <div class="col-xs-6 col-sm-6 col-md-7 col-lg-8">
           <h1 :style="{color: currentColor}">education</h1>
           <p>I'm a computer engineering student at <b>Amirkabir University of Technology</b> - Tehran Polytechnic (AUT) </p>
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
-          <img src="https://sdk.bitmoji.com/render/panel/7b0d608b-8b79-4d57-a49f-f15a558f61c8-9b405aba-93b2-440f-862b-045521d28ada-v1.png?transparent=1&palette=1" alt="education" class="pic">
-        </div>
+
       </div>
     </div>
 
@@ -55,9 +58,7 @@
     <div class="container-fluid partition" :style="{borderColor: currentColor}">
       <div  class="row">
 
-        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
-          <img src="https://sdk.bitmoji.com/render/panel/7b0d608b-8b79-4d57-a49f-f15a558f61c8-9b405aba-93b2-440f-862b-045521d28ada-v1.png?transparent=1&palette=1" alt="education" class="pic">
-        </div>
+
 
         <div class="col-xs-6 col-sm-6 col-md-7 col-lg-8">
           <h1 :style="{color: currentColor}">programming</h1>
@@ -77,7 +78,25 @@
               <p>C</p>
             </div>
           </div>
+          <hr :style="{backgroundColor:currentColor}">
+          <div class="row container">
+            <p>Here is a link to my Github account:</p>
+            <a href="https://github.com/amir78729" target="_blank">
+              <button class="no-focus btn" :style="{backgroundColor: currentColor}" style="margin-left: 20px ;color: white; height: 40px; border-radius: 20px">
+
+                <span>
+                  <i  class='fab fa-github '  style="cursor: pointer"></i>
+                </span>
+                <b>/amir78729</b>
+              </button>
+            </a>
+          </div>
         </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-5 col-lg-4">
+          <img src="https://sdk.bitmoji.com/render/panel/042c5481-28ec-4d85-8f58-1e8f2376bfc6-9b405aba-93b2-440f-862b-045521d28ada-v1.png?transparent=1&palette=1" alt="education" class="pic" style="border-radius: 50%">
+        </div>
+
       </div>
     </div>
 
@@ -123,12 +142,16 @@ export default {
 
 <style>
   #app {
-    font-family: 'HammerThin';
-    font-size: 18pt;
+    /*font-family: 'HammerThin';*/
+    font-family: 'IRANSans Light';
+    font-size: 15pt;
     /*width: 100%;*/
     padding: 0px;
     margin: 0;
     /*transition: all .3s;*/
+  }
+  .title-font{
+    font-family: 'HammerThin';
   }
   *{
     transition: all .3s ;
