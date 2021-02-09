@@ -25,8 +25,9 @@
 
     <div class="title">
       <div class="text title-font">
-        <p style="margin-bottom: -40px">Amirhossein</p>
-        <p style="letter-spacing: 6px">Alibakhshi</p>
+        <p style="margin-bottom: -40px; letter-spacing: -2px">Hi, my name is</p>
+        <p style="letter-spacing: 5px">Amirhossein!</p>
+<!--        <p style="margin-bottom: -0px">Amirhossein</p>-->
       </div>
     </div>
     <div class="container-fluid partition" :style="{borderColor: currentColor}">
@@ -53,17 +54,17 @@
           <p>Coding is a passion of mine!</p>
           <p>Specifically with languages like:</p>
           <div class="row">
-            <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+            <div class="programming-language col-sm-4 col-md-3 col-lg-2 row" style="text-align: center">
               <i :style="{color:currentColor}" class='fab fa-java' style='font-size:36px'></i>
-              <p>Java</p>
+              <p :style="{color:currentColor}">Java</p>
             </div>
-            <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+            <div class="programming-language col-sm-4 col-md-3 col-lg-2 row" style="text-align: center">
               <i :style="{color:currentColor}" class='fab fa-python' style='font-size:36px'></i>
-              <p>Python</p>
+              <p :style="{color:currentColor}">Python</p>
             </div>
-            <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
+            <div class="programming-language col-sm-4 col-md-3 col-lg-2 row" style="text-align: center">
               <i :style="{color:currentColor}" class='fab fa-cuttlefish' style='font-size:36px'></i>
-              <p>C</p>
+              <p :style="{color:currentColor}">C</p>
             </div>
           </div>
           <hr :style="{backgroundColor:currentColor}">
@@ -99,28 +100,28 @@
           <div class="row">
             <div class="col-sm-6 row">
               <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
-                <a href="https://instagram.com/amirhosseinalibakhshi">
-                  <i class='fa fa-google' style='font-size:36px'></i>
+                <a href="mailto: amirhosseinalibakhshi@gmail.com">
+                  <i :style="{color: currentColor}" class='fa fa-google' style='font-size:36px'></i>
                 </a>
               </div>
               <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
                 <a href="https://t.me/amirhosseinalibakhshi">
-                  <i class='fa fa-telegram' style='font-size:36px'></i>
+                  <i :style="{color: currentColor}" class='fa fa-telegram' style='font-size:36px'></i>
                 </a>
               </div>
               <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
                 <a href="https://linkedin.com/in/amirhosseinalibakhshi">
-                  <i class='fa fa-linkedin' style='font-size:36px'></i>
+                  <i :style="{color: currentColor}" class='fa fa-linkedin' style='font-size:36px'></i>
                 </a>
               </div>
-              <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
-                <a href="https://instagram.com/amirhosseinalibakhshi">
-                  <i class='fa fa-instagram' style='font-size:36px'></i>
-                </a>
-              </div>
+<!--              <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">-->
+<!--                <a href="https://instagram.com/amirhosseinalibakhshi">-->
+<!--                  <i :style="{color: currentColor}" class='fa fa-instagram' style='font-size:36px'></i>-->
+<!--                </a>-->
+<!--              </div>-->
               <div class="col-sm-4 col-md-3 col-lg-2" style="text-align: center">
                 <a href="https://github.com/amir78729">
-                  <i class='fa fa-github' style='font-size:36px'></i>
+                  <i :style="{color: currentColor}" class='fa fa-github' style='font-size:36px'></i>
                 </a>
               </div>
             </div>
@@ -201,7 +202,7 @@ export default {
 
   h1{
     font-family: Rage ;
-    font-size: 48pt;
+    font-size: 68pt;
   }
   .no-focus:focus{
     box-shadow: none;
@@ -215,6 +216,30 @@ export default {
   .buttons-30x30{
     height: 30px;
     width: 30px;
+  }
+  .programming-language:hover {
+    padding-right: 0px;
+    margin-right: 10px;
+  }
+
+  .programming-language {
+    position: relative;
+    width: 100%;
+  }
+
+  .programming-language p{
+    font-weight: bold;
+    position: absolute;
+    left: 55px;
+    top: 5px;
+    margin-bottom: 0;
+    opacity: 0;
+    font-size: 0;
+  }
+
+  .programming-language:hover p{
+    opacity: 100%;
+    font-size: 20px;
   }
 
   .partition{
@@ -277,7 +302,7 @@ export default {
 
   .title{
     position: relative;
-    background-image: url("https://cdn.discordapp.com/attachments/732234196487241741/760218343940292628/molana.jpg");
+    background-image: url("https://cdn.discordapp.com/attachments/732234196487241741/808749123045556244/unknown.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -311,14 +336,14 @@ export default {
     width: 100%;
     box-shadow: 0 0 400px 400px #00000099 inset;
   }
-  .image2{
+  .image2 {
     position: relative;
     background-image: url("https://cdn.discordapp.com/attachments/732234196487241741/760218343940292628/molana.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 550px;
+    height: 400px;
     width: 100%;
     box-shadow: 0 0 400px 400px #00000099 inset;
   }
